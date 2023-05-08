@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airbnp</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css' />
+
+
+</head>
+
+<body>
+    <header>
+        <a href="./index.html">
+            <img style="width: 100px;object-fit: contain;" src="./images/Airbnb-logo.jpg" alt="">
+
+        </a>
+        <div class="header-search">
+            <input type="text" value="Địa điểm bất kì | Tuần bất kì | Thêm khách......">
+            <button>
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </div>
+        <div class="header-user">
+            <p>Cho thuê chỗ ở qua Airbnb</p>
+            <i class="fa-solid fa-earth-americas"></i>
+            <div class="user-login" onclick="showLogin()">
+                <div id="userinfo" class="user-info">
+                    <i class="fa-solid fa-bars"></i>
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+                <div class="login">
+                    <a href="./page-register.html" style="color: black;">Đăng kí</a><br>
+                    <!-- onclick="showModalRegister()" -->
+                    <a href="./page-login.html" style="color: black;">Đăng nhập</a>
+                    <!-- onclick="showModal()" -->
+                    <br>
+                    <a href="./admin.html" style="color: black;">Quản lí đặt phòng</a>
+                    <p>Trợ giúp</p>
+                </div>
+            </div>
+
+
+
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="item-user">
+            <h3 id="name"></h3>
+
+            <div class="user-info">
+                <div class="user-rate">
+                    <i class="fa-solid fa-star"><span class="rating"></span></i>
+                    <a href="">129 đánh giá</a>
+                    <a href="" id="address">El Nido,Phillippines</a>
+
+                </div>
+                <div class="user-favor">
+                    <i class="fa-solid fa-share"></i>Share
+                    <i class="fa-regular fa-heart"></i>Heart
+                </div>
+
+            </div>
+
+            <div class="item-image">
+                <div class="col-6">
+                    <img class="main-img" style="width: 100%;" src="./images/235d56fe-4241-4267-a24c-c70fdb4f8711.jpg"
+                        alt="">
+
+                </div>
+                <div style="display: flex;flex-wrap: wrap;" class="col-6">
+                    <img class="col-6" src="./images/5c6f5c7c-b63e-4c2a-a560-8841ea8a9b34.jpg" alt="">
+                    <img class="col-6" src="./images/c0ae2877-1c70-466c-86c0-196e9e4db51a.jpg" alt="">
+                    <img class="col-6" src="./images/b194d187-e28f-4255-9c74-5fb34dfb0e2d.jpg" alt="">
+                    <img class="col-6" src="./images/a71562ca-bb0e-425d-b33f-e397617159e8.jpg" alt="">
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="item-content d-flex">
+            <div class="content-main col-7">
+                <div class="content-title mg-bor">
+                    <h4>Đảo. Chủ nhà Alfred Lee</h4>
+                    <p>Trên 16 khách . 7 phòng ngủ . 11 giường . 3 phòng tắm</p>
+                    <div class="content-owner">
+                        <img src="" alt="">
+                    </div>
+                </div>
+                <div class="content-more mg-bor">
+                    <div class="content-more-icon d-flex">
+                        <i class="fa-solid fa-location-dot "></i>
+                        <div class="content-more-text">
+                            <h5>Địa điểm tuyệt vời</h5>
+                            <p>100% khach gan day da sap xep 5 sao cho vi tri nay</p>
+                        </div>
+                    </div>
+                    <div class="content-more-icon d-flex">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div class="content-more-text">
+                            <h4>Hoan nghênh thú cưng</h4>
+                            <p>Mang theo thú cưng đến chỗ ở</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-text mg-bor">
+                    <img style="width: 200px; margin: 16px 0;height: 42px;"
+                        src="./images/f4a1e0fb-bd06-4f11-91e3-8d3979d3431a.webp" alt="">
+                    <p>Mọi đặt phòng đều được bảo vệ miễn phí trong trường hợp Chủ nhà hủy, thông tin nhà/phòng cho thuê
+                        không chính xác và những vấn đề khác như sự cố trong quá trình nhận phòng</p>
+                    <a href="">Tìm hiểu thêm</a>
+                </div>
+                <div class="content-auth mg-bor">
+                    <p>Một số thông tin đã được dịch tự động. <a href="">Hiển thị ngôn ngữ gốc</a></p>
+                    <p>Hòn đảo riêng duy nhất và bãi biển trắng nhất ở El Nido</p>
+                    <p>Sở Du Kịch(Sở VHTTDL) công nhận</p>
+                    <p>Bao gồm Gói không lo lắng:</p>
+                    <p>.....</p>
+                    <a href="">Hiển thị thêm </a>
+
+                </div>
+                <div class="content-locate mg-bor pb-5">
+                    <h4>Nơi bạn sẽ ngủ nghỉ</h4>
+                    <div class="main-locate d-flex mt-4">
+                        <div class="content-locate-1">
+                            <i class="fa-solid fa-bed"></i>
+                            <i class="fa-solid fa-bed"></i>
+                            <p>Phòng ngủ 1</p>
+                            <p>2 giường đơn</p>
+
+                        </div>
+                        <div class="content-locate-1">
+                            <i class="fa-solid fa-bed"></i>
+                            <p>Phòng ngủ 2</p>
+                            <p>1 giường đơn</p>
+
+                        </div>
+                        <div class="content-locate-1">
+                            <i class="fa-solid fa-bed"></i>
+                            <p>Phòng ngủ 2</p>
+                            <p>1 giường đơn</p>
+
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="content-add mg-bor ">
+                    <h4 class="mb-4">Nơi này có những gì cho bạn</h4>
+                    <div class="add-main d-flex">
+                        <div class="content-add-left ">
+                            <div class="add-item mb-2">
+                                <i class="fa-solid fa-umbrella-beach"></i>
+                                <span>Lối ra bãi biển</span>
+                            </div>
+                            <div class="add-item mb-2">
+                                <i class="fa-solid fa-wifi"></i>
+                                <span>Wifi</span>
+                            </div>
+                            <div class="add-item mb-2">
+                                <i class="fa-solid fa-car"></i>
+                                <span>Chỗ đỗ xe</span>
+                            </div>
+                            <div class="add-item mb-2">
+                                <i class="fa-solid fa-tv"></i>
+                                <span>TV</span>
+                            </div>
+                            <div class="add-item mb-2">
+                                <i class="fa-regular fa-hard-drive"></i>
+                                <span>Máy phát khí CO</span>
+                            </div>
+                        </div>
+                        <div class="content-add-right ">
+                            <div class="add-item mb-2">
+                                <i class="fa-solid fa-kitchen-set"></i>
+                                <span>Không gian bếp</span>
+                            </div>
+                            <div class="add-item mb-2">
+                                <i class="fa-solid fa-tablet"></i>
+                                <span>Khu vực rộng rãi</span>
+                            </div>
+                            <div class="add-item mb-2">
+                                <i class="fa-solid fa-paw"></i>
+                                <span>Thú cưng</span>
+                            </div>
+                            <div class="add-item mb-2">
+                                <i class="fa-solid fa-tv"></i>
+                                <span>TV</span>
+                            </div>
+                            <div class="add-item mb-2">
+                                <i class="fa-solid fa-hippo"></i>
+                                <span>Có sân riêng</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="content-date">
+                    <h4>Chọn ngày trả phòng</h4>
+                    <p>Thời gian ở tối thiểu : 2 đêm</p>
+                    <div class="content-calendar" id="calendar">
+                    </div>
+
+                </div>
+
+
+            </div>
+            <div class="content-extra col-5" style="width: 425px;">
+                <del>11.545.123</del>
+                <span>$ <span id="money"></span>/ đêm</span>
+                <p><i class="fa-solid fa-star"></i> <span class="rating"></span>. <a href="">129 đánh giá</a></p>
+
+                <form id="extra-room">
+
+                    <div class="room-btn p-2 ">
+                        <div class="room-main d-flex">
+                            <div class="extra-room-input pb-3" style="border-right: 1px solid #999;">
+                                <p class="mb-0">Nhận phòng</p>
+
+                                <input type="date" class="inputData" name="themngay" id="themngay1"
+                                    placeholder="Them ngay">
+
+                            </div>
+                            <div class="extra-room-output">
+                                <p class="mb-0">Trả phòng</p>
+                                <input type="date" class="inputData" name="themngay" id="themngay2"
+                                    placeholder="Them ngay">
+                            </div>
+                        </div>
+                        <div style="width: 100%; height: 30px; text-align: start; justify-content: space-between;"
+                            class="d-flex pt-2 user-select">
+                            <p>Khách</p>
+                            <p id="result"></p>
+                            <i id="arrow-up" class="fa-solid fa-arrow-up"></i>
+
+                            <div class="user-option hidden">
+
+
+                                <div class="user-item">
+                                    <div class="user-option-name">
+                                        <p class="user-option-childName">Người lớn</p>
+                                        <p>Từ 18 tuổi trở lên</p>
+                                    </div>
+                                    <div class="user-option-count">
+                                        <i id="minus-btn" style="border: 1px solid #999; border-radius: 50%;"
+                                            class="fa-solid fa-minus p-2"></i>
+                                        <span id="quantity">1</span>
+                                        <i id="plus-btn" style="border: 1px solid #999; border-radius: 50%;"
+                                            class="fa-solid fa-plus p-2"></i>
+                                    </div>
+                                </div>
+
+                                <div class="user-item">
+                                    <div class="user-option-name">
+                                        <p class="user-option-childName">Trẻ em</p>
+                                        <p>Từ 13 tuổi đến 17 tuổi</p>
+                                    </div>
+                                    <div class="user-option-count">
+                                        <i id="minus-btn" style="border: 1px solid #999; border-radius: 50%;"
+                                            class="fa-solid fa-minus p-2"></i>
+                                        <span id="quantity">1</span>
+                                        <i id="plus-btn" style="border: 1px solid #999; border-radius: 50%;"
+                                            class="fa-solid fa-plus p-2"></i>
+                                    </div>
+                                </div>
+
+                                <div class="user-item">
+                                    <div class="user-option-name">
+                                        <p class="user-option-childName">Em bé</p>
+                                        <p>Dưới 6 tuổi (free price)</p>
+                                    </div>
+                                    <div class="user-option-count">
+                                        <i id="minus-btn" style="border: 1px solid #999; border-radius: 50%;"
+                                            class="fa-solid fa-minus p-2"></i>
+                                        <span id="quantity">1</span>
+                                        <i id="plus-btn" style="border: 1px solid #999; border-radius: 50%;"
+                                            class="fa-solid fa-plus p-2"></i>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <button id="btn-set" class="btn w-100 p-2 mt-3" style="border: none; color: white">Kiểm tra đặt phòng</button>
+                </form>
+                <p class="result" id="result-tex" style="color: red; display: none;">Bạn vẫn chưa bị trừ tiền</p>
+                <span>Phí dịch vụ :</span> <span id="service_money">0</span><br>
+                <span>Phí vệ sinh</span> <span id="clear_money">0</span><br>
+                <span>Tổng trước thuế : </span><span id="total"></span>
+                <hr>
+                <span>Số tiền phải trả là : </span> <span id="sum_money"></span>
+            </div>
+        </div>
+
+
+        <h4>4,81.129 đánh giá</h4>
+        <div class="item-rate d-flex mg-bor">
+
+            <div class="rate-info-left m-lg-2 col-6">
+                <div class="rate-info d-flex justify-content-between">
+                    <span>Mức độ sạch sẽ</span>
+                    <div class="progress w-25" role="progressbar" aria-label="Basic example" aria-valuenow="75"
+                        aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar w-75"></div>
+                    </div>
+                </div>
+                <div class="rate-info d-flex justify-content-between">
+                    <span>Mức độ sạch sẽ</span>
+                    <div class="progress w-25" role="progressbar" aria-label="Basic example" aria-valuenow="75"
+                        aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar w-75"></div>
+                    </div>
+                </div>
+                <div class="rate-info d-flex justify-content-between">
+                    <span>Mức độ sạch sẽ</span>
+                    <div class="progress w-25" role="progressbar" aria-label="Basic example" aria-valuenow="75"
+                        aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar w-75"></div>
+                    </div>
+                </div>
+
+                <div class="rate-user">
+                    <div class="rate-user-info d-flex">
+                        <div class="rate-user-img">
+                            <i class="fa-solid fa-user-nurse"></i>
+                        </div>
+                        <div class="rate-user-time pt-2">
+                            <p class="mb-0">Alan</p>
+                            <p>tháng 4 năm 2023</p>
+                        </div>
+                    </div>
+                    <p>Đây là một nơi tuyệt vời, nó rất thư giãn và là một nơi hoàn hảo để yên tâm</p>
+                </div>
+                <div class="rate-user">
+                    <div class="rate-user-info d-flex">
+                        <div class="rate-user-img">
+                            <i class="fa-solid fa-user-nurse"></i>
+                        </div>
+                        <div class="rate-user-time pt-2">
+                            <p class="mb-0">Alan</p>
+                            <p>tháng 4 năm 2023</p>
+                        </div>
+                    </div>
+                    <p>Đây là một nơi tuyệt vời, nó rất thư giãn và là một nơi hoàn hảo để yên tâm</p>
+                </div>
+            </div>
+
+            <div class="rate-info-right m-lg-2 col-6">
+                <div class="rate-info d-flex justify-content-between">
+                    <span>Mức độ sạch sẽ</span>
+                    <div class="progress w-25" role="progressbar" aria-label="Basic example" aria-valuenow="75"
+                        aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar w-75"></div>
+                    </div>
+                </div>
+                <div class="rate-info d-flex justify-content-between">
+                    <span>Mức độ sạch sẽ</span>
+                    <div class="progress w-25" role="progressbar" aria-label="Basic example" aria-valuenow="75"
+                        aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar w-75"></div>
+                    </div>
+                </div>
+                <div class="rate-info d-flex justify-content-between">
+                    <span>Mức độ sạch sẽ</span>
+                    <div class="progress w-25" role="progressbar" aria-label="Basic example" aria-valuenow="75"
+                        aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar w-75"></div>
+                    </div>
+                </div>
+
+                <div class="rate-user">
+                    <div class="rate-user-info d-flex">
+                        <div class="rate-user-img">
+                            <i class="fa-solid fa-user-nurse"></i>
+                        </div>
+                        <div class="rate-user-time pt-2">
+                            <p class="mb-0">Alan</p>
+                            <p>tháng 4 năm 2023</p>
+                        </div>
+                    </div>
+                    <p>Đây là một nơi tuyệt vời, nó rất thư giãn và là một nơi hoàn hảo để yên tâm</p>
+                </div>
+                <div class="rate-user">
+                    <div class="rate-user-info d-flex">
+                        <div class="rate-user-img">
+                            <i class="fa-solid fa-user-nurse"></i>
+                        </div>
+                        <div class="rate-user-time pt-2">
+                            <p class="mb-0">Alan</p>
+                            <p>tháng 4 năm 2023</p>
+                        </div>
+                    </div>
+                    <p>Đây là một nơi tuyệt vời, nó rất thư giãn và là một nơi hoàn hảo để yên tâm</p>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+        <h4 style="margin: 20px 0;" class="">Nơi bạn sẽ đến</h4>
+        <div class="item-locate mg-bor ">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.376014698655!2d105.778415410944!3d21.017635580548113!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313454ab30540137%3A0x35ac90387f094f93!2zVMOyYSBuaMOgIFPDtG5nIMSQw6A!5e0!3m2!1svi!2s!4v1681950406834!5m2!1svi!2s"
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="locate-info pb-4">
+                <h4 style="margin: 20px 0;" class="">El Nido,Phillipines</h4>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi odio ut beatae sunt ratione
+                    soluta iste perferendis voluptate magni. Architecto consequatur alias quis accusamus eaque
+                    voluptatem illo minus cum voluptate!</p>
+            </div>
+        </div>
+
+
+        <div class="item-owner pt-3 mg-bor pb-5">
+            <div class="owner-info d-flex ">
+                <i style="line-height: 49px;
+                font-size: 40px;
+                margin-right: 15px;" class="fa-solid fa-user-nurse">
+                </i>
+                <div class="owner-text">
+                    <h4>Chủ nhà Alfred Lee</h4>
+                    <p>Đã tham gia vào tháng 5 năm 2014</p>
+                </div>
+            </div>
+            <div class="owner-main d-flex">
+                <div class="owner-left col-6">
+                    <i class="fa-solid fa-star"></i> <span>150 đánh giá</span>
+                    <i class="fa-solid fa-shield-halved"></i> <span>Đã xác minh danh tính</span>
+                    <p>"Một cuộc hành trình dài hàng ngàn dặm bắt đầu với một bước duy nhất - Laozi"</p>
+                    <h4>Trong thời gian ở</h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam doloremque fuga, iusto veritatis
+                        quis eum ducimus suscipit nostrum consequuntur hic? Labore rem dicta nemo cum ullam quas ipsam
+                        fugiat harum?</p>
+                </div>
+
+                <div class="owner-right col-6">
+                    <p>Ngôn ngữ : English, VietNamese</p>
+                    <p>TỈ lệ phản hồi : 100%</p>
+                    <p>Thời gian phản hồi : Trong vài giờ</p>
+
+                </div>
+            </div>
+
+        </div>
+        <h4>Những điều cần biết</h4>
+        <div class="item-more d-flex mg-bor pb-5">
+
+            <div class="more-info col-4">
+                <h5>Nội quy nhà</h5>
+                <p>Nhận phòng sau 10:00</p>
+                <p>Trả phòng trước 08:00</p>
+                <p>Được phép mang theo thú cưng</p>
+                <a href="">Hiển thị thêm</a>
+
+            </div>
+            <div class="more-info col-4">
+                <h5>An toàn và chỗ ở</h5>
+                <p>Không có máy phát hiện khí CO</p>
+                <p>Không có máy báo khói </p>
+                <p>Một số không gian được sử dụng chung</p>
+                <a href="">Hiển thị thêm</a>
+
+            </div>
+            <div class="more-info col-4">
+                <h5>Chính sách hủy</h5>
+                <p>Đặt phòng/đặt chỗ này không được hoàn tiền.</p>
+                <p>Hãy đọc toàn bộ chính sách hủy của Chủ nhà/Người tổ chức được áp dụng ngay cả khi bạn hủy vì ốm bệnh
+                    hoặc gián đoạn do dịch COVID-19.</p>
+                <a href="">Hiển thị thêm</a>
+
+            </div>
+        </div>
+        <div class="item-legal d-flex pb-5">
+            <div class="legal-info col-3">
+                <h5>Hỗ trợ</h5>
+                <p>Trung tâm trợ giúp</p>
+                <p>AirCover</p>
+                <p>Hỗ trợ người khuyết tật</p>
+                <p>Các tùy chọn hủy</p>
+                <p>Biện pháp ứng phps với đại dịch COVID-19 của chúng tôi</p>
+                <p>Báo cáo lo ngại của hàng xóm</p>
+            </div>
+            <div class="legal-info col-3">
+                <h5>Cộng đồng</h5>
+                <p>Airbnb.org : nhà ở cứu trợ</p>
+                <p>Chống phân biệt đối xử </p>
+            </div>
+            <div class="legal-info col-3">
+                <h5>Đón tiếp khách</h5>
+                <p>Cho thuê nhà trên Airbnb</p>
+                <p>AirCover cho Chủ nhà</p>
+                <p>Xem tài nguyên đón tiếp khách</p>
+                <p>Truy cập diễn đàn cộng đồng</p>
+                <p>Đón tiếp khách có trách nhiệm</p>
+            </div>
+            <div class="legal-info col-3">
+                <h5>Airbnb</h5>
+                <p>Trang tin tức</p>
+                <p>Tìm hiểu các tính năng mới</p>
+                <p>Thư ngỏ các nhà sáng lập</p>
+                <p>Cơ hội nghề nghiệp</p>
+                <p>Nhà đầu tư</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-left">
+            <i class="fa-regular fa-copyright"></i>
+            <span>2023 Airbnb,Inc</span>
+            <span>Quyền riêng tư </span>
+            <span>Điều khoản </span>
+            <span>Sơ đồ trang web </span>
+        </div>
+        <div class="footer-right">
+            <i class="fa-solid fa-earth-americas"></i>
+            <span>Tiếng Việt</span>
+            <span>Hỗ trợ và tài nguyên</span><i class="fa-solid fa-arrow-up"></i>
+        </div>
+    </footer>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+        integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+        integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+        crossorigin="anonymous"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <script src="./item1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"
+        integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+
+</html>

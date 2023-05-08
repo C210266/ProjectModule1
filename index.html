@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airbnp</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" type="" href="/favicon.png"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <a href="#">
+            <img style="width: 100px;object-fit: contain;" src="./images/Airbnb-logo.jpg" alt="">
+
+        </a>
+        <div class="header-search">
+            <input type="text" placeholder="Địa điểm bất kì | Tuần bất kì | Thêm khách......">
+            <button style="width: 33px;">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </div>
+        <div class="header-user">
+            <p>Cho thuê chỗ ở qua Airbnb</p>
+            <i class="fa-solid fa-earth-americas"></i>
+            <div class="user-login" onclick="showLogin()">
+                <div id="userinfo" class="user-info">
+                    <i class="fa-solid fa-bars"></i>
+                    <i class="fa-solid fa-user user-img"></i>
+
+                </div>
+                <div style="display: none;" class="login">
+                    <a href="./page-register.html" id="register" style="color: black;">Đăng kí</a><br>
+
+                    <!-- onclick="showModalRegister()" -->
+                    <a href="./page-login.html" id="login" style="color: black;">Đăng nhập</a>
+                    <!-- onclick="showModal()" -->
+
+                    <br>
+                    <a href="./admin.html" style="color: black;">Quản lí đặt phòng</a>
+                    <p>Trợ giúp</p>
+                </div>
+            </div>
+
+
+
+        </div>
+    </header>
+
+    <!-- Login -->
+    <div id="id01" class="modal">
+
+        <form class="modal-content animate" action="/action_page.php" method="post">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                    title="Close Modal">&times;</span>
+                <img style="width: 100px;height: 100px;" src="./images/sontung.jpg" alt="Avatar" class="avatar">
+            </div>
+
+            <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <button class="btn-login" type="submit">Login</button>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+            </div>
+
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                    class="cancelbtn">Cancel</button>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+        </form>
+    </div>
+
+
+    <!-- Register -->
+    <div id="id02" class="modal-register">
+
+        <form class="modal-content animate" action="/action_page.php" method="post">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id02').style.display='none'" class="close"
+                    title="Close Modal">&times;</span>
+                <img style="width: 100px;height: 100px;" src="./images/sontung.jpg" alt="Avatar" class="avatar">
+            </div>
+
+            <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <button class="btn-register" type="submit">Đăng kí</button>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+            </div>
+
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id02').style.display='none'"
+                    class="cancelbtn">Cancel</button>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+        </form>
+    </div>
+
+
+    <div class="container">
+        <div class="slider" id="slider">
+            <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-road"></i>
+                                <p>Xa lộ</p>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-money-bill-trend-up"></i>
+                                <p>Hướng rừng</p>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-mountain-sun"></i>
+                                <p>Hướng núi</p>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-umbrella-beach"></i>
+                                <p>Hướng biển</p>
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-house-tsunami"></i>
+                                <p>Sóng biển</p>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-ship"></i>
+                                <p>Xa bờ</p>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-fire"></i>
+                                <p>Nhiệt đới</p>
+                            </li>
+                            <li>
+                                <i class="fa-regular fa-tree-city"></i>
+                                <p>Hướng sông</p>
+                            </li>
+                            <li>
+                                <i class="fa-sharp fa-solid fa-handshake-simple"></i>
+                                <p>Hướng rừng</p>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-wind"></i>
+                                <p>Phù sa</p>
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-tree-city"></i>
+                                <p>Đất cát</p>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                    <div class="carousel-item">
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-road"></i>
+                                <p>Xa lộ</p>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-money-bill-trend-up"></i>
+                                <p>Hương rừng</p>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-mountain-sun"></i>
+                                <p>Núi</p>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-umbrella-beach"></i>
+                                <p>Hương biển</p>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-mountain-sun"></i>
+                                <p>Núi</p>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-house-tsunami"></i>
+                                <p>Sóng biển</p>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-ship"></i>
+                                <p>Thuyen</p>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-fire"></i>
+                                <p>Song bien</p>
+                            </li>
+                            <li>
+                                <i class="fa-regular fa-tree-city"></i>
+                                <p>Song bien</p>
+                            </li>
+                            <li>
+                                <i class="fa-sharp fa-solid fa-handshake-simple"></i>
+                                <p>Song bien</p>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-wind"></i>
+                                <p>Song bien</p>
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-tree-city"></i>
+                                <p>Song bien</p>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                    <div class="carousel-item">
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-road"></i>
+                                <p>Xa lộ</p>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-money-bill-trend-up"></i>
+                                <p>Hương rừng</p>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-mountain-sun"></i>
+                                <p>Núi</p>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-umbrella-beach"></i>
+                                <p>Hương biển</p>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-mountain-sun"></i>
+                                <p>Núi</p>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-house-tsunami"></i>
+                                <p>Sóng biển</p>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-ship"></i>
+                                <p>Thuyen</p>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-fire"></i>
+                                <p>Song bien</p>
+                            </li>
+                            <li>
+                                <i class="fa-regular fa-tree-city"></i>
+                                <p>Song bien</p>
+                            </li>
+                            <li>
+                                <i class="fa-sharp fa-solid fa-handshake-simple"></i>
+                                <p>Song bien</p>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-wind"></i>
+                                <p>Song bien</p>
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-tree-city"></i>
+                                <p>Song bien</p>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </div>
+
+                <button class="btn carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="btn carousel-control-next" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+
+        <div class="view_result">
+            <p>Hiển thị tổng giá</p>
+            <span>Bao gồm mọi khoản phí, trước thuế</span>
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider1 round"></span>
+            </label>
+        </div>
+        <div class="content">
+            <div class="item col-3" data-id="1" data-name="Thành phố Nha Trang,Việt Nam"
+                data-address="Nhiệt đới, Hướng biển" data-price="60" data-rating="4.81">
+                <i class="far fa-heart" onclick="toggleHeart(this)"></i>
+               
+                <a href="./item1.html"><img src="./images/235d56fe-4241-4267-a24c-c70fdb4f8711.jpg" alt=""></a>
+                <h6 id="title">Thành phố Nha Trang,Việt Nam</h6>
+                <p id="address">Hướng biển, Nhiệt đới</p>
+                <div class="d-flex justify-content-between">
+                    <p>Ngày 04 - Ngày 07 tháng 5</p>
+                    <span>⭐<span id="rating" style="margin-right: 25px;">4.81</span></span>
+
+                </div>
+                <p>$ <span id="price">60</span> / đêm</p>
+            </div>
+            <div class="item col-3" data-id="2" data-name="Thành phố Thanh Hóa ,Việt Nam" data-address="Xa lộ"
+                data-price="40" data-rating="4.9">
+                <i class="far fa-heart" onclick="toggleHeart(this)"></i>
+                <a href="./item1.html"><img src="./images/a71562ca-bb0e-425d-b33f-e397617159e8.jpg" alt=""></a>
+                <h6 id="title">Thành phố Thanh Hóa,Việt Nam</h6>
+                <p id="address">Xa lộ</p>
+                <div class="d-flex justify-content-between">
+                    <p>Ngày 04 - Ngày 07 tháng 5</p>
+                    <span>⭐<span id="rating" style="margin-right: 25px;">4.9</span></span>
+
+                </div>
+                <p>$ <span id="price">49</span> / đêm</p>
+            </div>
+            <div class="item col-3" data-id="3" data-name="Thành phố Vũng Tàu ,Việt Nam"
+                data-address="Hướng biển,Thuyền" data-price="57" data-rating="4.74">
+                <i class="far fa-heart" onclick="toggleHeart(this)"></i>
+                <a href="./item1.html"><img src="./images/3ea816e8-1b93-4a25-bb0e-2a3ee6448c6e.jpeg" alt=""></a>
+                <h6 id="title">Thành phố Vũng Tàu,Việt Nam</h6>
+                <p id="address">Hướng biển,Thuyền</p>
+                <div class="d-flex justify-content-between">
+                    <p>Ngày 04 - Ngày 07 tháng 5</p>
+                    <span>⭐<span id="rating" style="margin-right: 25px;">4.74</span></span>
+
+                </div>
+                <p>$ <span id="price">57</span> / đêm</p>
+            </div>
+            <div class="item col-3" data-id="4" data-name="Thành phố Nam Định ,Việt Nam"
+                data-address="Hướng núi, Đất cát" data-price="50" data-rating="4.66">
+                <i class="far fa-heart" onclick="toggleHeart(this)"></i>
+                <a href="./item1.html"><img src="./images/41e10b7e-4908-4cdb-963f-87399b27cc63.jpg" alt=""></a>
+                <h6 id="title">Thành phố Nam Định,Việt Nam</h6>
+                <p id="address">Hướng núi, Đất cát</p>
+                <div class="d-flex justify-content-between">
+                    <p>Ngày 04 - Ngày 07 tháng 5</p>
+                    <span>⭐<span id="rating" style="margin-right: 25px;">4.66</span></span>
+
+                </div>
+                <p>$ <span id="price">50</span> / đêm</p>
+            </div>
+            <div class="item col-3" data-id="5" data-name="Thành phố Cà Mau ,Việt Nam"
+                data-address="Hướng sông, Hướng biển" data-price="70" data-rating="4.87">
+                <i class="far fa-heart" onclick="toggleHeart(this)"></i>
+                <a href="./item1.html"><img src="./images/4bc53dfe-2ef7-402c-a68f-f0a9b22da386.jpg" alt=""></a>
+                <h6 id="title">Thành phố Cà Mau,Việt Nam</h6>
+                <p id="address">Hướng sông, Hướng biển</p>
+                <div class="d-flex justify-content-between">
+                    <p>Ngày 04 - Ngày 07 tháng 5</p>
+                    <span>⭐<span id="rating" style="margin-right: 25px;">4.87</span></span>
+
+                </div>
+                <p>$ <span id="price">70</span> / đêm</p>
+            </div>
+            <div class="item col-3" data-id="6" data-name="Thành phố Bình Định ,Việt Nam" data-address="Hướng núi"
+                data-price="52" data-rating="4.72">
+                <i class="far fa-heart" onclick="toggleHeart(this)"></i>
+                <a href="./item1.html"><img src="./images/5c6f5c7c-b63e-4c2a-a560-8841ea8a9b34.jpg" alt=""></a>
+                <h6 id="title">Thành phố Bình Định,Việt Nam</h6>
+                <p id="address">Hướng núi</p>
+                <div class="d-flex justify-content-between">
+                    <p>Ngày 04 - Ngày 07 tháng 5</p>
+                    <span>⭐<span id="rating" style="margin-right: 25px;">4.72</span></span>
+
+                </div>
+                <p>$ <span id="price">52</span> / đêm</p>
+            </div>
+            <div class="item col-3" data-id="7" data-name="Thành phố ĐăkLak ,Việt Nam" data-address="Hướng núi,Phù sa"
+                data-price="56" data-rating="4.78">
+                <i class="far fa-heart" onclick="toggleHeart(this)"></i>
+                <a href="./item1.html"><img src="./images/9025e20a-eda6-46e3-a7c4-40dc5d568cb0.jpg" alt=""></a>
+                <h6 id="title">Thành phố ĐăkLak,Việt Nam</h6>
+                <p id="address">Hướng núi,Phù sa</p>
+                <div class="d-flex justify-content-between">
+                    <p>Ngày 04 - Ngày 07 tháng 5</p>
+                    <span>⭐<span id="rating" style="margin-right: 25px;">4.78</span></span>
+
+                </div>
+                <p>$ <span id="price">56</span> / đêm</p>
+            </div>
+            <div class="item col-3" data-id="8" data-name="Thành phố Hải Phòng ,Việt Nam"
+                data-address="Xa bờ, Hướng biển" data-price="58" data-rating="4.8">
+                <i class="far fa-heart" onclick="toggleHeart(this)"></i>
+                <a href="./item1.html"><img src="./images/b194d187-e28f-4255-9c74-5fb34dfb0e2d.jpg" alt=""></a>
+                <h6 id="title">Thành phố Hải Phòng,Việt Nam</h6>
+                <p id="address">Xa bờ, Hướng biển</p>
+                <div class="d-flex justify-content-between">
+                    <p>Ngày 04 - Ngày 07 tháng 5</p>
+                    <span>⭐<span id="rating" style="margin-right: 25px;">4.8</span></span>
+
+                </div>
+                <p>$ <span id="price">58</span> / đêm</p>
+            </div>
+            <div class="item col-3" data-id="9" data-name="Thành phố Đà Nẵng ,Việt Nam" data-address="Thuyền, Sóng biển"
+                data-price="72" data-rating="4.92">
+                <i class="far fa-heart" onclick="toggleHeart(this)"></i>
+                <a href="./item1.html"><img src="./images/9.jpg" alt=""></a>
+                <h6 id="title">Thành phố Đà Nẵng,Việt Nam</h6>
+                <p id="address">Thuyền, Sóng biển</p>
+                <div class="d-flex justify-content-between">
+                    <p>Ngày 04 - Ngày 07 tháng 5</p>
+                    <span>⭐<span id="rating" style="margin-right: 25px;">4.92</span></span>
+
+                </div>
+                <p>$ <span id="price">72</span> / đêm</p>
+            </div>
+            <div class="item col-3" data-id="10" data-name="Thành phố Vinh ,Việt Nam" data-address="Đất cát, Phù sa"
+                data-price="68" data-rating="4.78">
+                <i class="far fa-heart" onclick="toggleHeart(this)"></i>
+                <a href="./item1.html"><img src="./images/10.jpeg" alt=""></a>
+                <h6 id="title">Thành phố Vinh,Việt Nam</h6>
+                <p id="address">Đất cát, Phù sa</p>
+                <div class="d-flex justify-content-between">
+                    <p>Ngày 04 - Ngày 07 tháng 5</p>
+                    <span>⭐<span id="rating" style="margin-right: 25px;">4.78</span></span>
+
+                </div>
+                <p>$ <span id="price">68</span> / đêm</p>
+            </div>
+
+            <div class="item col-3" data-id="11" data-name="Thành phố Ninh Bình ,Việt Nam"
+                data-address="Xa lộ, Hướng biển" data-price="86" data-rating="4.71">
+                <i class="far fa-heart" onclick="toggleHeart(this)"></i>
+                <a href="./item1.html"><img src="./images/11.jpeg" alt=""></a>
+                <h6 id="title">Thành phố Ninh Bình,Việt Nam</h6>
+                <p id="address">Xa lộ, Hướng biển</p>
+                <div class="d-flex justify-content-between">
+                    <p>Ngày 04 - Ngày 07 tháng 5</p>
+                    <span>⭐<span id="rating" style="margin-right: 25px;">4.71</span></span>
+
+                </div>
+                <p>$ <span id="price">86</span> / đêm</p>
+            </div>
+            <div class="item col-3" data-id="12" data-name="Thành phố Bắc Giang ,Việt Nam"
+                data-address="Hướng rừng, Đất cát" data-price="66" data-rating="4.68">
+                <i class="far fa-heart" onclick="toggleHeart(this)"></i>
+                <a href="./item1.html"><img src="./images/12.jpg" alt=""></a>
+                <h6 id="title">Thành phố Bắc Giang,Việt Nam</h6>
+                <p id="address">Hướng rừng, Đất cát</p>
+                <div class="d-flex justify-content-between">
+                    <p>Ngày 04 - Ngày 07 tháng 5</p>
+                    <span>⭐<span id="rating" style="margin-right: 25px;">4.68</span></span>
+
+                </div>
+                <p>$ <span id="price">66</span> / đêm</p>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="footer-left">
+            <i class="fa-regular fa-copyright"></i>
+            <span>2023 Airbnb,Inc</span>
+            <span>Quyền riêng tư </span>
+            <span>Điều khoản </span>
+            <span>Sơ đồ trang web </span>
+        </div>
+        <div class="footer-right">
+            <i class="fa-solid fa-earth-americas"></i>
+            <span>Tiếng Việt</span>
+            <span>Hỗ trợ và tài nguyên</span><i class=" fa-solid fa-arrow-up upHead"
+                style="padding: 8px; border: 1px solid #999;border-radius: 50%;"></i>
+        </div>
+    </footer>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+        integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+        integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+        crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>
